@@ -1,5 +1,6 @@
 import { PRODUCTS } from "../../products";
 import Product from "./Product";
+import "./shop.css";
 
 const Shop = () => {
   console.log(PRODUCTS);

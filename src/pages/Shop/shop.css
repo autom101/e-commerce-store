@@ -1,0 +1,33 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.shop-header {
+  text-align: center;
+}
+
+.shop-products {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.25rem;
+}
+
+.product-description {
+  text-align: center;
+}
+
+.product-image {
+  width: 10rem;
+  height: 10rem;
+}
