@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { ShopContext } from "../../context/shop-context";
+
 const CartItem = ({ product, quantity }) => {
-  const { name, price, image } = product;
+  const { addToCart, removeFromCart } = useContext(ShopContext);
+
+  const { id, name, price, image } = product;
   console.log(product);
   return (
     <div className="cart-item">
@@ -10,9 +15,21 @@ const CartItem = ({ product, quantity }) => {
         </p>
         <p>${price * quantity}</p>
         <div className="cart-buttons">
-          <button>-</button>
+          <button
+            onClick={() => {
+              removeFromCart(id);
+            }}
+          >
+            -
+          </button>
           <p>{quantity}</p>
-          <button>+</button>
+          <button
+            onClick={() => {
+              addToCart(id);
+            }}
+          >
+            +
+          </button>
         </div>
       </div>
     </div>
