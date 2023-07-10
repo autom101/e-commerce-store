@@ -3,9 +3,8 @@ import { ShopContext } from "../../context/shop-context";
 
 const CartItem = ({ product, quantity }) => {
   const { addToCart, removeFromCart } = useContext(ShopContext);
-
   const { id, name, price, image } = product;
-  console.log(product);
+
   return (
     <div className="cart-item">
       <img className="cart-item-image" src={image} alt={`${name}`} />

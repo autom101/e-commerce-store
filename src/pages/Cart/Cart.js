@@ -10,6 +10,12 @@ const Cart = () => {
     return cartItems[product.id];
   });
 
+  const subTotal = existingProducts.reduce((prev, current) => {
+    const quantity = cartItems[current.id];
+    const price = current.price;
+    return prev + quantity * price;
+  }, 0);
+
   return (
     <div className="cart">
       <header className="cart-header">
@@ -25,6 +31,10 @@ const Cart = () => {
             />
           );
         })}
+      </section>
+
+      <section className="cart-subtotal">
+        <h2>Sub Total: ${subTotal}</h2>
       </section>
     </div>
   );

@@ -3,7 +3,6 @@ import Product from "./Product";
 import "./shop.css";
 
 const Shop = () => {
-  console.log(PRODUCTS);
   return (
     <div className="shop">
       <header className="shop-header">

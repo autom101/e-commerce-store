@@ -1,6 +1,8 @@
 .cart {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
@@ -24,9 +26,9 @@
 
   padding: 0.5rem;
 
-  border: 1px solid none;
+  border: 1px solid transparent;
   border-radius: 1rem;
-  box-shadow: 1px 1px 1px;
+  box-shadow: 1px 1px 2px 1px;
 }
 
 .cart-item-description {
