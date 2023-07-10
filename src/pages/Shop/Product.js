@@ -3,7 +3,9 @@ import { ShopContext } from "../../context/shop-context";
 
 const Product = ({ product }) => {
   const { id, name, price, image } = product;
-  const { addToCart } = useContext(ShopContext);
+  const { addToCart, cartItems } = useContext(ShopContext);
+
+  const cartItemAmount = cartItems[id];
   return (
     <div className="product">
       <img className="product-image" src={image} alt={`${name}`} />
@@ -19,7 +21,7 @@ const Product = ({ product }) => {
           addToCart(id);
         }}
       >
-        Add to Cart
+        Add to Cart{cartItemAmount > 0 ? ` (${cartItemAmount})` : null}
       </button>
     </div>
   );
