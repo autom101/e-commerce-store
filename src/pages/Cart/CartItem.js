@@ -9,6 +9,11 @@ const CartItem = ({ product, quantity }) => {
           <b>{name}</b>
         </p>
         <p>${price * quantity}</p>
+        <div className="cart-buttons">
+          <button>-</button>
+          <p>{quantity}</p>
+          <button>+</button>
+        </div>
       </div>
     </div>
   );
