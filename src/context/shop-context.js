@@ -10,7 +10,6 @@ const ShopContextProvider = (props) => {
     const quantity = newCartItems[productId] || 0;
     newCartItems[productId] = quantity + 1;
     setCartItems(newCartItems);
-    console.log("Add to cart called. New cart: ", newCartItems);
   };
 
   const removeFromCart = (productId) => {
